@@ -176,8 +176,62 @@ header ul li a:hover{
     padding-top: 10em;
 }
 
+#community .photo-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 #community img{
-width: 200px;
-height: 200px;
-object-fit: cover;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+#events{
+    color: white;
+    background: linear-gradient(#000000, #3d3d3d);    
+    padding: 5em;
+    padding-top: 10em;
+
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px){
+    #events .narrow{
+        display: none;
+    }
+    #events .mid{
+        display: none;
+    }
+    #events .wide{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px){
+    #events .narrow{
+        display: none;
+    }
+    #events .mid{
+        display: block;
+    }
+    #events .wide{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #events .narrow{
+        display: block;
+    }
+    #events .mid{
+        display: none;
+    }
+    #events .wide{
+        display: none;
+    }
 }
