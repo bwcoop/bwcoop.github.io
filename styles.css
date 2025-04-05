@@ -1,0 +1,183 @@
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+
+    animation-name: headerAnimation;
+    animation-duration: 2s;
+
+    position: sticky;
+    top: 0;
+}
+
+@keyframes headerAnimation{
+    0%{
+        background-color: #000000;
+    }
+    0%{
+        background-color: #333333;
+    }
+    100%{
+        background-color: #000000;
+    }
+}
+
+header nav{
+    flex: 1;
+    text-align: center;
+
+    animation-name: headerNavAnimation;
+    animation-duration: 2s;
+}
+
+@keyframes headerNavAnimation{
+    0%{
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+header ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+header ul li{
+    display: inline;
+    margin-right: 10px;
+}
+
+header ul li a{
+    color: white;
+    text-decoration: none;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+header ul li a:hover{
+    text-decoration: underline;
+    font-size: larger;
+}   
+
+#hero{
+    background-color: #000000;
+    background-image: url('/img/hero.webp');
+    background-size: cover;
+    background-position: top; 
+    text-align: center;
+    padding: 10em;
+    margin: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px){
+    #hero{
+        background-position: bottom; 
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200){
+    #hero{
+        background-position: center; 
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+    #hero{
+        background-position: 0 -400px; 
+    }
+    
+}
+
+@media screen and (min-width: 1280px){
+    #hero{
+        background-position: 0 -200px; 
+    }
+    
+}
+
+#hero h1{
+    font-size: 5em;
+    margin: 0;
+
+    animation-name: heroH1Animation;
+    animation-duration: 2s;
+}
+
+#hero-text{
+    color: white;
+    font-size: 1.5em;
+    padding: 1em;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    animation-name: heroH1Animation;
+    animation-duration: 2s;
+
+}
+
+@keyframes heroH1Animation{
+    0%{
+        transform: translateY(100vh);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#about{
+    color: white;
+    background: linear-gradient(#000000, #3d3d3d);    
+    padding: 5em;
+    padding-top: 10em;
+}
+
+#about img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    animation-name: aboutImgAnimation;
+    animation-duration: 2s;
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+
+#community{
+    color: white;
+    background: linear-gradient(#3d3d3d, #000000);    
+    padding: 5em;
+    padding-top: 10em;
+}
+
+#community img{
+width: 200px;
+height: 200px;
+object-fit: cover;
+}
